@@ -1,7 +1,7 @@
 # Memoria Técnica SI
 ## Infraestructura de Acceso Remoto Centralizado mediante Docker y Apache Guacamole
 
-**Autor:** [Pepe Gil Cué]
+**Autor:** Pepe Gil Cué
 **Ciclo:** DAW — Sistemas Informáticos
 **Fecha:** 15 de mayo de 2026
 
@@ -20,13 +20,13 @@
 
 ### 1.1. Contexto y Problemática Actual
 
-La empresa objeto de este proyecto, dedicada al desarrollo de software multiplataforma, requería que su equipo técnico pudiese acceder de forma remota a los servidores de desarrollo y bases de datos ubicados en el centro de datos privado. El acceso como antes he explicado se realiza de manera directa mediante los protocolos RDP y SSH, lo cual obligaba a mantener abiertos múltiples.
+La empresa objeto de este proyecto, dedicada al desarrollo de software, requería que su equipo técnico pudiese acceder de forma remota a los servidores de desarrollo y bases de datos ubicados en el centro de datos privado. El acceso como antes he explicado se realiza de manera directa mediante los protocolos RDP y SSH, lo cual obligaba a mantener abiertos múltiples.
 
-Esto presenta una serie de problemas de naturaleza técnica, operativa y de seguridad que comprometían la viabilidad del entorno a largo plazo. En primer lugar, la superficie de ataque del sistema era excesivamente grande, cada puerto abierto representa una entrada accesible.
+Esto presenta una serie de problemas de naturaleza técnica y de seguridad que comprometían la viabilidad del entorno a largo plazo. En primer lugar, la superficie de ataque del sistema era excesivamente grande, cada puerto abierto representa una entrada accesible.
 
 ### 1.2. Solución Propuesta: Infraestructura Híbrida Docker-Guacamole
 
-Tras analizar los requerimientos de accesibilidad, seguridad y escalabilidad, se ha optado por implementar una infraestructura basada en Apache Guacamole desplegada mediante Docker Compose.
+Tras analizar los requerimientos de accesibilidad y seguridad se opta por implementar una infraestructura basada en Apache Guacamole desplegada mediante Docker Compose.
 
 Apache Guacamole es una pasarela de escritorio remoto sin cliente que actúa como punto de acceso único para los protocolos SSH, RDP y VNC. El usuario accede exclusivamente a través de un navegador web, sin necesidad de instalar ningún software adicional en su máquina.
 
@@ -53,7 +53,7 @@ García Notario, D. (2015). Análisis de requisitos en el desarrollo del softwar
 
 ## 2. Identificación de Licencias
 
-Véase el archivo LICENSES.md en la raíz del repositorio, donde se recoge la clasificación completa del software utilizado según su licencia y propósito, en cumplimiento del criterio de evaluación CE a.
+El archivo LICENSES.md en la raíz del repositorio, donde se recoge la clasificación completa del software utilizado según su licencia y propósito, en cumplimiento del criterio de evaluación CE a.
 
 
 ## 3. Arquitectura del Sistema
