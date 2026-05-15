@@ -1,4 +1,4 @@
-# LICENSES.md
+# LICENSES
 ## Identificación de Licencias del Software de Infraestructura
 
 Este documento recoge las licencias de cada componente de software utilizado en la infraestructura desplegada en el proyecto. Su elaboración responde al criterio de evaluación CE a, que exige clasificar el software en función de su licencia y propósito.
