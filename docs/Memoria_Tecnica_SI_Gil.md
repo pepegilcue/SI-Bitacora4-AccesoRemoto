@@ -55,14 +55,28 @@ García Notario, D. (2015). Análisis de requisitos en el desarrollo del softwar
 
 El archivo LICENSES.md en la raíz del repositorio, donde se recoge la clasificación completa del software utilizado según su licencia y propósito, en cumplimiento del criterio de evaluación CE a.
 
+**Nota:** Los apartados 3, 4 y 5 de esta memoria no forman parte de los requisitos del Sprint 1. Se han añadido de forma voluntaria y fuera de plazo debido a que la actividad no me quedó completamente clara en un primer momento, por lo que decidí profundizar en el trabajo para comprender con mayor precision el funcionamiento completo del sistema desplegado. Al tratarse de un contenido extra, no solicito que sea tenido en cuenta para la calificación de la entrega.
 
-## 3. Arquitectura del Sistema
-
-
-
+## 3. Arquitectura del Sistema 
+ 
+Los tres contenedores (guacamole, guacd y postgres) se comunican entre ellos por una red interna que crea Docker Compose automáticamente. Desde fuera solo se puede acceder al puerto de Guacamole, los demás están cerrados.
+ 
+Guacamole habla con guacd para abrir las sesiones remotas y con PostgreSQL para comprobar el usuario y la contraseña. Guacd es el que se conecta de verdad a los servidores por SSH o RDP.
+ 
 ## 4. Proceso de Despliegue
-
-
-
+ 
+El despliegue se hizo en un servidor Linux con Docker y Docker Compose. Los pasos que se siguieron fueron:
+ 
+1. Instalar Docker y Docker Compose en el servidor.
+2. Crear el docker-compose.yml con los tres servicios.
+3. Poner las credenciales de la base de datos en las variables de entorno.
+4. Ejecutar el script SQL de Guacamole para crear las tablas.
+5. Levantar los contenedores con `docker compose up -d`.
+6. Entrar al puerto 8080 desde el navegador y comprobar que el login funcionaba.
+ 
 ## 5. Conclusiones
+ 
+Con este proyecto se ha montado un sistema de acceso remoto real usando solo software gratuito. Se ha visto cómo Docker hace mucho más fácil desplegar servicios y cómo Guacamole soluciona el problema de acceder a servidores sin tener que instalar nada en el ordenador.
+ 
+También se ha entendido por qué es importante documentar bien: si no explicas lo que has hecho y por qué, el siguiente que llegue no va a entender nada.
 
